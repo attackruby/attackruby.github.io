@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Search Results</h1>
+    {% if results %}
+        <ul>
+        {% for memento in results %}
+            <li>{{ memento.title }} - {{ memento.description }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+{% endblock %}
